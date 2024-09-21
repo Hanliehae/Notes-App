@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Impor script kamu di sini -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Notes</h1>
+    </header>
+
+    <main>
+      <div class="box">
+        <section class="add-notes" id="form">
+          <h2>Add Your Notes Here!</h2>
+          <form id="doNotes" data-testid="doNotes">
+            <div>
+              <label class="label-judul" for="doNotesTitle">Title</label>
+              <input
+                id="doNotesTitle"
+                type="text"
+                required
+                data-testid="doNotesTitleInput"
+              />
+            </div>
+            <div>
+              <label class="label-judul" for="doNotesBody"
+                >Notes For Today</label
+              >
+              <textarea
+                id="doNotesBody"
+                type="text"
+                required
+                data-testid="doNotesBodyInput"
+              ></textarea>
+            </div>
+            <div>
+              <label class="label-judul" for="doNotesCreated">Created At</label>
+              <input
+                id="doNotesCreated"
+                type="date"
+                required
+                data-testid="doNotesCreated"
+              />
+            </div>
+            <div class="checkbox">
+              <label for="doNotesArchieved">Archieved</label>
+              <input
+                id="doNotesArchieved"
+                type="checkbox"
+                data-testid="doNotesArchieved"
+              />
+            </div>
+            <button
+              id="doNotesSubmit"
+              type="submit"
+              data-testid="doNotesSubmitButton"
+            >
+              New Notes
+            </button>
+          </form>
+        </section>
+
+        <!-- <section class="cari-buku" id="search">
+          <h2>Search Notes</h2>
+          <form id="searchBook" data-testid="searchBookForm">
+            <label for="searchBookTitle">Title</label>
+            <input
+              id="searchBookTitle"
+              type="text"
+              data-testid="searchBookFormTitleInput"
+            />
+            <button
+              id="searchSubmit"
+              type="submit"
+              data-testid="searchBookFormSubmitButton"
+            >
+              search
+            </button>
+          </form>
+        </section> -->
+
+        <section class="addNotes" id="tambah">
+          <h2>New Notes</h2>
+
+          <div id="newNotes" data-testid="newNotes">
+            <!-- 
+            Ini adalah struktur HTML untuk masing-masing buku.
+            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+          -->
+            <div data-notesid="123123123" data-testid="notesProperty">
+              <h3 data-testid="notesPropertyTitle">Welcome to Notes, Dimas</h3>
+              <p data-testid="notesPropertyBody">
+                body: Welcome to Notes! This is your first note. You can archive
+                it, delete it, or create new ones.
+              </p>
+              <p data-testid="notesPropertyCreated">
+                createdAt: 2022-07-28T10:03:12.594Z
+              </p>
+              <div>
+                <button data-testid="notesPropertyNewNotesButton">done</button>
+                <button data-testid="notesPropertyNewNotesDeleteButton">
+                  delete
+                </button>
+                <button data-testid="notesPropertyNewNotesEditButton">
+                  edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="archieved" id="sudah">
+          <h2>Archieved</h2>
+
+          <div id="notesArchieved" data-testid="notesArchieved">
+            <!-- 
+            Ini adalah struktur HTML untuk masing-masing buku.
+            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+          -->
+            <div data-notesid="456456456" data-testid="notesPropertyArchieved">
+              <h3 data-testid="notesPropertyTitle">Welcome to Notes, Dimas</h3>
+              <p data-testid="notesPropertyBody">
+                body: Welcome to Notes! This is your first note. You can archive
+                it, delete it, or create new ones.
+              </p>
+              <p data-testid="notesPropertyCreated">
+                createdAt: 2022-07-28T10:03:12.594Z
+              </p>
+              <div>
+                <button data-testid="notesPropertyArchievedButton">done</button>
+                <button data-testid="notesPropertyNewNotesDeleteButton">
+                  delete
+                </button>
+                <button data-testid="notesPropertyNewNotesEditButton">
+                  edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script defer src="main.js"></script>
+    </main>
+    <footer>
+      <p>NotesCompany2024</p>
+    </footer>
+  </body>
+</html>
