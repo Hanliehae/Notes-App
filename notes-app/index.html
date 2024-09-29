@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Impor script kamu di sini -->
+    <link rel="stylesheet" href="src/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+
+    <main>
+      <div class="box">
+        <section class="add-notes" id="form">
+          <h2>Add Your Notes Here!</h2>
+          <form id="doNotes" autocomplete="off">
+            <div>
+              <label class="noteTitle">Title</label>
+              <input
+                id="doNotesTitle"
+                type="text"
+                required
+                minlength="6"
+                pattern="^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$"
+                aria-describedby="titleValidation"
+              />
+              <br />
+              <p
+                id="titleValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div>
+              <label class="label-judul" for="doNotesBody"
+                >Notes For Today</label
+              >
+              <textarea
+                id="doNotesBody"
+                type="text"
+                required
+                minlength="10"
+                pattern="^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$"
+                aria-describedby="descriptionValidation"
+              ></textarea>
+              <br />
+              <p
+                id="descriptionValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div></div>
+            <button id="doNotesSubmit" type="submit">Add Notes</button>
+            <button id="archievedNotes" type="submit">Archieved Notes</button>
+          </form>
+        </section>
+
+        <section class="myNotes" id="sudah">
+          <h2>My Notes</h2>
+          <div id="containerItem">
+            <note-item></note-item>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <footer-bar></footer-bar>
+    </footer>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
